@@ -1,0 +1,136 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    background-color: rgb(48, 44, 44);
+    font-family: 'Open Sans', sans-serif;
+}
+#container{
+    background: url("Shinjuki Park.jpg");
+    width: 1000px;
+    height: 550px;
+    margin: 20px auto;
+}
+#calculator{
+    position: relative;
+    background-color: white;
+    height: 520px;
+    margin: 0 auto;
+    width: 320px;
+    border-radius: 5px;
+    top: 20px;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+#result{
+    height: 120px;
+    position: relative;
+}
+#screen {
+    width: 250px;
+    float: left;
+}
+#history {
+    background-color:white;
+    height: 45px;
+    margin: 0 2px;
+    text-align: right;
+    font-size: 15px;
+    padding: 20px 0 5px 0;
+}
+#input{
+    text-align: right;
+    height: 60px;
+    margin: 10px 2px 5px;
+    font-size: 30px;
+    background-color: white;
+}
+#microphone {
+    background: url("mic.png");
+    background-size: 100% 100%;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    float: left;
+    margin: 45px 20px;
+}
+.record {
+    animation: microphoneAnimation 1.5s infinite;
+}
+@keyframes microphoneAnimation {
+    0% {
+        transform: scale(0.9);
+    }
+    50% {
+        transform: scale(1);
+        box-shadow: 0 0 0 10px rgba(0, 148, 255, 0.4);
+    }
+    100% {
+        transform: scale(0.9);
+        box-shadow: 0 0 0 0 rgba(0, 148, 255, 0);
+    }
+}
+#tooltip {
+    width: 200px;
+    font-size: 9px;
+    background-color: lightgray;
+    position: absolute;
+    padding: 5px;
+    top: 45px;
+    right: -182px;
+    border-radius: 3px; 
+    visibility: hidden;
+}
+#tooltip::before { /* Add content before tooltip- The little triangle */
+    content: "";
+    position: absolute;
+    border: 5px solid;
+    border-color: transparent lightgrey transparent transparent;
+    left: -10px;
+}
+#microphoneContainer:hover #tooltip{
+    visibility: visible;
+}
+#keypad{
+    height: 400px;
+}
+.number , .operator, .empty{
+    width: 50px;
+    height: 50px;
+    margin: 15px;
+    color: black;
+    font-size: 20px;
+    font-weight: bold;
+    background-color: lightgrey;
+    border-radius: 50%;
+    float: left;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.empty{
+    background-color: white;
+    cursor: default;
+}
+#keypad .number:active, #keypad .operator:active{
+    font-size: 15px;
+}
+#b3{
+    font-size: 25px;
+    background-color: #20b2aa;
+}
+#b7{
+    font-size: 25px;
+    background-color: #ffa500;
+}
+#b11{
+    font-size: 25px;
+    background-color: #f08080;
+}
+#b15{
+    font-size: 25px;
+    background-color: #7d93e0;
+}
+#b19{
+    font-size: 25px;
+    background-color: #9477af;
+}
